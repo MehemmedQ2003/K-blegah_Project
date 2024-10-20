@@ -118,3 +118,17 @@
 [data-rehype-pretty-code-title] + pre {
   @apply mt-0 rounded-t-none border-t-0;
 }
+
+/* New scroll code rule */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #BB8922;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}

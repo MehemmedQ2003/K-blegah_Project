@@ -25,7 +25,7 @@ interface FeatureProps {
 const Feature: React.FC<FeatureProps> = ({ icon, title, description, isActive, onClick }) => (
   <article 
     onClick={onClick} 
-    className={`cursor-pointer transition-all duration-300 ${isActive ? 'bg-yellow-500 bg-opacity-50 border border-yellow-500 rounded-3xl' : ''}`}
+    className={`border border-yellow-500 rounded-3xl cursor-pointer transition-all duration-300 ${isActive ? 'bg-yellow-500 bg-opacity-50 rounded-3xl' : ''}`}
   >
     <h3
     className={`mb-2 flex items-center space-x-2 font-medium ${isActive ? 'text-[#fff]' : 'text-[#fff]'}`}>
@@ -145,7 +145,7 @@ export default function FeaturesPlanet() {
   ];
 
   return (
-    <section id="features-planet" className="relative before:absolute before:inset-0 before:-z-20 before:bg-[#333431]">
+    <section id="features-planet" className="relative before:absolute before:inset-0 before:-z-20 before:bg-[#000] py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
@@ -158,7 +158,7 @@ export default function FeaturesPlanet() {
           {/* iPhone and Grid container */}
           <div className="flex flex-col items-center md:flex-row md:items-center md:space-x-8">
             {/* iPhone */}
-            <div className="md:w-1/3 pb-16 md:pb-0" data-aos="zoom-y-out">
+            <div className="md:w-1/2 pb-16 md:pb-0" data-aos="zoom-y-out">
               <div className="text-center">
                 <div className="relative inline-flex rounded-3xl before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-yellow-600 before:to-yellow-800 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(),transparent)]">
                   <div className="relative">
@@ -176,7 +176,7 @@ export default function FeaturesPlanet() {
             </div>
             
             {/* Grid */}
-            <div className="md:w-2/3 grid overflow-hidden sm:grid-cols-3 lg:grid-cols-2 gap-6 [&>*]:relative [&>*]:p-6 [&>*]:before:absolute [&>*]:before:bg-gray-600 [&>*]:before:[block-size:100%] [&>*]:before:[inline-size:1px] [&>*]:before:[inset-block-start:0] [&>*]:before:[inset-inline-start:-1px] [&>*]:after:absolute [&>*]:after:bg-gray-600 [&>*]:after:[block-size:1px] [&>*]:after:[inline-size:100%] [&>*]:after:[inset-block-start:-1px] [&>*]:after:[inset-inline-start:0] md:[&>*]:p-6">
+            <div className="md:w-1/2 grid overflow-hidden sm:grid-cols-1 lg:grid-cols-1  gap-6 [&>*]:relative [&>*]:p-6 [&>*]:before:absolute [&>*]:before:[block-size:100%] [&>*]:before:[inline-size:1px] [&>*]:before:[inset-block-start:0] [&>*]:before:[inset-inline-start:-1px] [&>*]:after:absolute [&>*]:after:[block-size:1px] [&>*]:after:[inline-size:100%] [&>*]:after:[inset-block-start:-1px] [&>*]:after:[inset-inline-start:0] md:[&>*]:p-6">
               {features.map((feature) => (
                 <Feature
                   key={feature.key}
